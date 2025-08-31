@@ -1,0 +1,123 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 8.5rem;
+}
+
+.dropdown-item:hover{
+background-color: wheat;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bg-custom{
+    background-color: rgb(14, 14, 70);
+    opacity: 0.9;
+}
+
+.nav-link:hover{
+  color: orangered;
+  text-decoration: line-through;
+}
+
+
+/* Dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Smooth hover behavior */
+.dropdown-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+ #backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+
+
+
+
+.bg-foot-custom{
+      background-color: rgb(14, 14, 70);
+
+}
+
+.footer{
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+.footer:hover{
+  font-weight: bolder;
+  color: orangered;
+}
+
+.copy-foot{
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.copy-foot:hover{
+color: orange;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.like-btn {
+      background-color: navy;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-left: 4rem;
+      transition: background 0.3s;
+    }
+
+    .like-btn:hover {
+      background-color: blue;
+    }
+
+    .like-count {
+      font-weight: bold;
+      margin-left: 10px;
+      color: white;
+      background-color: navy;
+    }

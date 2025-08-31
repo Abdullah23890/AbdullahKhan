@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah | Web-Engineering</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding-top: 3rem;
+      background:radial-gradient(red,orange,navy);
+    }
+
+    .blog-main-head {
+      color: black;
+      font-weight: bolder;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .blog-main-head:hover {
+      color: navy;
+    }
+
+    #backToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: none;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Card Styling */
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .btn {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <p class="blog-main-head fixed-top fade-in" style="color: navy;margin-top: 2rem;margin-bottom: 2rem;">Our Blog</p>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center mt-5 fade-in">
+      <!-- Card 1 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center my-5">
+        <div class="card my-3" style="width: 18rem;">
+          <img src="img/blog-our-journey-confuse-img.jpg" alt="Our Journey">
+          <a href="our-journey.html" class="btn btn-light text-danger fw-bold">Our Journey</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center my-5">
+        <div class="card" style="width: 18rem;">
+          <img src="img/blog-customer-mind-img.jpg" alt="Customer in Mind">
+          <a href="customer-mind-blog.html" class="btn btn-light text-danger fw-bold">Coding with the Customer in Mind</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center my-5">
+        <div class="card" style="width: 18rem;">
+          <img src="img/blog-Client to Full Confidenc-img.jpg" alt="Confidence Journey">
+          <a href="first-client-blog.html" class="btn btn-light text-danger fw-bold">My Journey from First Client to Full Confidence</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <a href="home.html">
+    <p class="text-center text-dark fw-bold mt-4 fade-in fs-4" style="text-decoration: none;">🏠Back to Home</p>
+  </a>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" class="btn btn-warning rounded-circle">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Scroll button show/hide
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Fade-in on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    fadeElements.forEach(el => {
+      fadeObserver.observe(el);
+    });
+  </script>
+</body>
+</html>

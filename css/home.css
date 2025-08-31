@@ -1,0 +1,310 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 8rem;
+}
+
+.dropdown-item:hover{
+background-color: wheat;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bg-custom{
+    background-color: rgb(14, 14, 70);
+    opacity: 0.9;
+}
+
+.nav-link:hover{
+  color: orangered;
+  text-decoration: line-through;
+}
+
+
+/* Dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Smooth hover behavior */
+.dropdown-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+
+.technology{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.technology:hover{
+    opacity: 0.9;
+}
+
+.para-tech{
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+  margin-top: 1.4rem;
+  text-align: center;
+  animation: tech-para 3s ease-in 1s infinite;
+}
+
+@keyframes tech-para {
+  0%{
+    color: black;
+    text-shadow: 0px 0px 20px white;
+  }
+    20%{
+    color: navy;
+    text-shadow: 0px 0px 20px orangered;
+  }
+    40%{
+    color: orange;
+    text-shadow: 0px 0px 20px navy;
+  }
+    60%{
+    color: rebeccapurple;
+    text-shadow: 0px 0px 20px brown;
+  }
+    80%{
+    color: wheat;
+    text-shadow: 0px 0px 20px orchid;
+  }
+    100%{
+    color: darkgreen;
+    text-shadow: 0px 0px 20px fuchsia;
+  }
+}
+
+.div{
+  background: linear-gradient(red,navy,orangered);
+  height: 20px;
+  width: auto;
+  margin-top: 1rem;
+}
+
+
+	/* Banner styling */
+		.banner {
+			display: block;
+			min-height: 200px;
+			width: 100%;
+			position: relative;
+			font-family: sans-serif;
+      margin-top: -2rem;
+		}
+
+		/* Centered box */
+		.typed_wrap {
+			display: block;
+			width: auto;
+			height: auto;
+			padding: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.typed_wrap h1 {
+			display: inline;
+			font-size: 20px;
+      color: navy;
+      font-weight: bolder;
+		}
+
+		/* Custom blinking cursor */
+		.typed::after {
+			content: '|';
+			display: inline;
+			animation: blink 0.7s infinite;
+		}
+
+		@keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+
+		/* Hide typed.js built-in cursor */
+		.typed-cursor {
+			display: none !important;
+		}
+
+.progress-main{
+  width: 100%;
+  height: 2rem;
+  background-color: lightblue;
+  border-radius:7px ;
+}
+
+.progress-inner1{
+    width: 97%;
+    height: 2rem;
+  background-color: navy;
+  border-radius:7px ;
+  animation: skills 3s steps(14) ;
+}
+
+@keyframes skills {
+  0%{
+    width: 3%;
+  }
+   10%{
+    width: 7%;
+  }
+ 15%{
+    width: 13%;
+  }
+  19%{
+    width: 17%;
+  }
+  30%{
+    width: 23%;
+  }
+   40%{
+    width: 32%;
+  }
+   45%{
+    width: 36%;
+  }
+     52%{
+    width: 45%;
+  }
+     56%{
+    width: 49%;
+  }
+     62%{
+    width: 54%;
+  }
+     67%{
+    width: 60%;
+  }
+      72%{
+    width: 64%;
+  }
+    78%{
+    width: 69%;
+  }
+    83%{
+    width: 70%;
+  }
+    91%{
+    width: 74%;
+  }
+    95%{
+    width: 72%;
+  }
+    100%{
+    width: 97%;
+  }
+}
+
+.progress-inner2{
+    width: 97%;
+    height: 2rem;
+  background-color: navy;
+  border-radius:7px ;
+    animation: skills 3s steps(14) ;
+
+}
+
+.progress-inner3{
+    width: 100%;
+    height: 2rem;
+  background-color: navy;
+  border-radius:7px ;
+    animation: skills 3s steps(14) ;
+
+}
+
+.progress-inner4{
+    width: 99%;
+    height: 2rem;
+  background-color: navy;
+  border-radius:7px ;
+    animation: skills 3s steps(14);
+}
+
+
+ #backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+
+  .swiper {
+  width: 90%;
+  height: 300px;
+}
+
+.swiper-slide {
+  background-color: #eee;
+  font-size: 24px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-foot-custom{
+      background-color: rgb(14, 14, 70);
+
+}
+
+.footer{
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+.footer:hover{
+  font-weight: bolder;
+  color: orangered;
+}
+
+.copy-foot{
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.copy-foot:hover{
+color: orange;
+}
+ 
+/* fade animate */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
