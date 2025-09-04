@@ -18,7 +18,7 @@ a{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.name-index:hover{
+.name-index{
    color: navy;
 }
 
@@ -28,22 +28,23 @@ a{
 
 @keyframes index-img {
     0%{
-        box-shadow: 0px 0px 500px darkblue;
+        box-shadow: 0px 0px 1000px darkblue;
     }
       20%{
-        box-shadow: 0px 0px 500px red;
+        box-shadow: 0px 0px 1000px red;
     }
       40%{
-        box-shadow: 0px 0px 500px navy;
+        box-shadow: 0px 0px 1000px orange;
     }
       60%{
         box-shadow: 0px 0px 500px whitesmoke;
     }
       80%{
-        box-shadow: 0px 0px 500px peru;
+        box-shadow: 0px 0px 500px black;
     }
       100%{
-        box-shadow: 0px 0px 500px pink;
+        box-shadow: 0px 0px 500px yellow;
     }
 }
+
 
