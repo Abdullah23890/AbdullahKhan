@@ -22,22 +22,22 @@
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 
- function sendMessage() {
-      // Clear input fields
-      document.getElementById("floatingInput").value = "";
-      document.getElementById("floatingtext").value = "";
-      document.getElementById("floatingTextarea").value = "";
+  function sendMessage() {
+    const email = document.getElementById('floatingInput').value.trim();
+    const subject = document.getElementById('floatingtext').value.trim();
+    const message = document.getElementById('floatingTextarea').value.trim();
 
-      // Show success message
-      const alertDiv = document.getElementById("alertMessage");
-      alertDiv.style.display = "block";
-
-      // Optionally hide the message after few seconds
-      setTimeout(() => {
-        alertDiv.style.display = "none";
-      }, 4000); // 4 seconds
+    if (!email || !subject || !message) {
+      alert('Please fill in all fields before sending.');
+      return;
     }
 
+    const phoneNumber = '923333983684'; // WhatsApp number without '+'
+    const text = `Email: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    window.open(whatsappURL, '_blank');
+  }
 
     // Fade-in on scroll using IntersectionObserver
 const fadeElements = document.querySelectorAll('.fade-in');
@@ -56,3 +56,4 @@ const fadeObserver = new IntersectionObserver((entries, observer) => {
 fadeElements.forEach(el => {
   fadeObserver.observe(el);
 });
+
